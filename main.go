@@ -25,8 +25,8 @@ func main() {
 
 		// github env
 		workflow = os.Getenv("GITHUB_WORKFLOW")
-		repo     = os.Getenv("GITHUB_REPOSITORY")
-		commit   = os.Getenv("GITHUB_SHA")
+		repo     = os.Getenv("github.event.repository")
+		commit   = os.Getenv("github.event.repository.commits")
 	)
 
 	if token == "" {
